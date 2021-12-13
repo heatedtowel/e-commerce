@@ -1,0 +1,101 @@
+html, * {
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #0141c7;
+  --secondary: #9b4a35;
+  --offcolor: #551515;
+  --accent: #02fbfd;
+  --text: #dcdfe8;
+
+}
+
+#navBar {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--main);
+}
+
+#navBarCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+#navBarCenter > span > h1 {
+  color: var(--text);
+}
+
+#navLinks {
+  display: flex;
+  position: relative;
+}
+
+#navLinks > a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0 1rem;
+}
+
+#navLinks > button {
+  padding: .4rem .8rem;
+  border-radius: .4rem;
+  background-color: var(--text);
+  color: var(--secondary);
+  font-weight: 400;
+}
+
+.link {
+  padding: 0 1rem;
+}
+
+#results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  padding: 2rem;
+}
+
+#input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 188, 209);
+  padding: 2rem;
+}
+
+.openEffect {
+  transition: 3s;
+  transform:translateX(-350px);
+}
+
+#openCart {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  position: absolute;
+  left: 100px;
+  top: 40px;
+  height: 77vh;
+  width: 35vw;
+  border-radius: 4rem;
+  background-color: var(--secondary);
+  transition: transform 1.0s;
+}
+
+
+
+#item {
+  
+}
