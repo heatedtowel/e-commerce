@@ -1,17 +1,12 @@
-var cartEL = document.getElementById('cart');
-let cartOpen = document.getElementById('openCart')
+const cartEL = document.getElementById('cart');
+const cartOpen = document.getElementById('openCart')
 
-let isOpen = false;
 
 cartEL.addEventListener('click', () => {
-  switch (isOpen) {
-    case false:
-      cartOpen.classList.add('openEffect');
-      isOpen = true;
-      break;
-    case true:
-      cartOpen.classList.remove('openEffect');
-      isOpen = false;
-      break;
+  if (cartOpen.classList.contains('openEffect')) {
+    cartOpen.classList.remove("openEffect");
+    return cartOpen.classList.add("closeEffect");
   }
+  cartOpen.classList.remove("closeEffect");
+  cartOpen.classList.add("openEffect");
 });

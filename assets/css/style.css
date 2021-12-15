@@ -5,11 +5,11 @@ html, * {
 }
 
 :root {
-  --main: #0141c7;
-  --secondary: #9b4a35;
-  --offcolor: #551515;
-  --accent: #02fbfd;
-  --text: #dcdfe8;
+  --main: #D8E2DC;
+  --secondary: #F8EDEB;
+  --offcolor: #FAE1DD;
+  --accent: #E8E8E4;
+  --text: #000;
 
 }
 
@@ -46,10 +46,11 @@ html, * {
 }
 
 #navLinks > button {
+  cursor: pointer;
   padding: .4rem .8rem;
   border-radius: .4rem;
-  background-color: var(--text);
-  color: var(--secondary);
+  background-color: var(--offcolor);
+  color: var(--text);
   font-weight: 400;
 }
 
@@ -74,8 +75,13 @@ html, * {
 }
 
 .openEffect {
-  transition: 3s;
-  transform:translateX(-350px);
+  animation: cartOpacityOpen .7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.closeEffect {
+  animation: cartOpacityClose .7s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 #openCart {
@@ -85,17 +91,43 @@ html, * {
   gap: 2rem;
   padding: 2rem;
   position: absolute;
-  left: 100px;
-  top: 40px;
-  height: 77vh;
-  width: 35vw;
+  left: -130px;
+  top: 60px;
   border-radius: 4rem;
-  background-color: var(--secondary);
-  transition: transform 1.0s;
+  background-color: var(--offcolor);
+  opacity: 0;
+  
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.item > img {
+  flex-basis: 50%;
+}
 
-#item {
-  
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes cartOpacityOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cartOpacityClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
